@@ -10,6 +10,9 @@
   "homepage": "https://github.com/clauderic/react-sortable-hoc",
   "main": "dist/commonjs/index.js",
   "jsnext:main": "dist/es6/index.js",
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -33,6 +36,7 @@
     "component"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "start": "webpack-dashboard -- node server.js",
     "build": "npm run build:commonjs && npm run build:es6 && npm run build:umd",
     "build:commonjs": "npm run clean:commonjs && cross-env BABEL_ENV=commonjs babel src --out-dir dist/commonjs --ignore *.example.js,*.test.js",
